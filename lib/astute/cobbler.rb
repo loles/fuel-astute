@@ -26,7 +26,7 @@ module Astute
       def initialize(o={})
         Astute.logger.debug("Cobbler options: #{o.inspect}")
 
-        if (match = /^http:\/\/([^:]+?):?(\d+)?(\/.+)/.match(o['url']))
+        if (match = /^http:\/\/([^:]*):?(\d+)?(\/.+)/.match(o['url']))
           host = match[1]
           port = match[2] || '80'
           path = match[3]
