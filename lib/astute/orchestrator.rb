@@ -54,7 +54,7 @@ module Astute
       engine = create_engine(engine_attrs, reporter)
       begin
         add_nodes_to_cobbler(engine, nodes)
-        remove_nodes(reporter, task_id="", nodes, reboot=false)
+        #remove_nodes(reporter, task_id="", nodes, reboot=false)
         reboot_events = reboot_nodes(engine, nodes)
         failed_nodes  = check_reboot_nodes(engine, reboot_events)
       rescue RuntimeError => e
